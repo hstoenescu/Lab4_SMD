@@ -89,11 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 if (photoURI != null) {
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                     startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-
                 }
-
             }
-
         }
     }
     @RequiresApi(api = Build.VERSION_CODES.M)

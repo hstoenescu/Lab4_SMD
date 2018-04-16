@@ -15,12 +15,4 @@
         tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="347dp"
-        android:layout_height="406dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="MissingConstraints,VectorDrawableCompat"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="91dp" />
 </android.support.constraint.ConstraintLayout>

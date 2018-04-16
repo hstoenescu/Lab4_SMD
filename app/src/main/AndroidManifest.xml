@@ -7,6 +7,19 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <permission-tree android:name="com.example.student.mycamera.permission-custom-tree"
+                    android:label="CUSTOM_LABEL_CAMERA" />
+
+    <permission-group android:name="com.example.student.mycamera.permission-custom-tree.permission-group.CAMERA_CUSTOM_GROUP"
+                      android:label="CUSTOM_LABEL_CAMERA_GROUP" />
+
+    <permission
+        android:name="com.example.student.mycamera.permission-custom-tree.CAMERA_CUSTOM_PERM"
+        android:label="@string/my_custom_permission"
+        android:description="@string/my_custom_permission"
+        android:permissionGroup="com.example.student.mycamera.permission-custom-tree.permission-group.CAMERA_CUSTOM_GROUP"
+        android:protectionLevel="dangerous" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,9 +30,17 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".DisplayPictureActivity"
+                  android:permission="com.example.student.mycamera.permission-custom-tree.CAMERA_CUSTOM_PERM">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.example.student.mycamera.startDisplayPictureActivity" />
+            </intent-filter>
+
         </activity>
 
         <provider
